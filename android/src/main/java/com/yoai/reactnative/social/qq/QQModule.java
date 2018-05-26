@@ -199,13 +199,8 @@ public class QQModule extends ReactContextBaseJavaModule implements ActivityEven
     }
   }
 
-
-  private void info(String msg) {
-    Utils.info(TAG, msg);
-  }
-
   @Override
-  public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+  public void onActivityResult(Activity activity,int requestCode, int resultCode, Intent data) {
     if (listener != null) {
       Tencent.onActivityResultData(requestCode, resultCode, data, listener);
     }
@@ -215,4 +210,11 @@ public class QQModule extends ReactContextBaseJavaModule implements ActivityEven
   public void onNewIntent(Intent intent) {
 
   }
+
+  private void info(String msg) {
+    Utils.info(TAG, msg);
+  }
+
+
+
 }

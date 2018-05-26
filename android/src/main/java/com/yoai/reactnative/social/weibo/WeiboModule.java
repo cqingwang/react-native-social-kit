@@ -258,7 +258,7 @@ public class WeiboModule extends ReactContextBaseJavaModule implements ActivityE
 
   @Override
   public void onNewIntent(Intent intent) {
-    
+
   }
 
   private static void info(String msg) {
@@ -268,6 +268,9 @@ public class WeiboModule extends ReactContextBaseJavaModule implements ActivityE
   private String buildTransaction(final String type) {
     return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
   }
+
+
+
 
   /**
    * 微博SDK需要传入的responseHandler为Activity类型,所以这里伪造一个假的Activity
